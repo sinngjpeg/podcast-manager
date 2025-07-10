@@ -1,0 +1,28 @@
+{
+  "name": "podcast-manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsx src/server.ts",
+    "start:watch": "tsx watch src/server.ts",
+    "dist": "tsup src",
+    "start:dist": "nom run dist && node/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinngjpeg/podcast-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sinngjpeg/podcast-manager/issues"
+  },
+  "homepage": "https://github.com/sinngjpeg/podcast-manager#readme",
+  "description": "",
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
