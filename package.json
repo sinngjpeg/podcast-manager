@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "tsx --env-file=.env src/server.ts",
-    "start:watch": "tsx --env-file=.env watch src/server.ts",
+    "start:watch": "tsx watch --env-file=.env src/server.ts",
     "dist": "tsup src",
     "start:dist": "npm run dist && --env-file=.env node/server.js"
   },
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/sinngjpeg/podcast-manager.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ingrid Silva",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sinngjpeg/podcast-manager/issues"
