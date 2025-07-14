@@ -3,6 +3,7 @@ import {serviceListEpisodes} from '../services/list-episodes-services';
 import { serviceFilterEpisodes } from "../services/filter-episodes.service";
 import { StatusCode } from "../utils/status-code";
 import { ContentType } from "../utils/content-type";
+import { FilterPodCastModel } from "../models/filter-podcast-model";
 
 export const getListEpisodes = async (
     request: IncomingMessage,
@@ -19,8 +20,8 @@ export const getFilterEpisodes = async(
     response: ServerResponse
 ) => {
     
-    const content = await serviceFilterEpisodes(request.url);
-    response.writeHead(StatusCode.OK, { "Content-Type": ContentType.JSON });
+    const content: FilterPodCastModel = await serviceFilterEpisodes(request.url);
+    response.writeHead(content.statusCode, { "Content-Type": ContentType.JSON });
     response.end(
-        JSON.stringify(content));
+        JSON.stringify(content.body));
 };
